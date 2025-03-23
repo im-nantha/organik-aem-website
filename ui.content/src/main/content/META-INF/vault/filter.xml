@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/organik-aem-website" mode="merge"/>
+    <filter root="/content/organik-aem-website" mode="merge"/>
+    <filter root="/content/dam/organik-aem-website" mode="merge">
+        <exclude pattern="/content/dam/organik-aem-website(/.*)?"/>
+        <include pattern="/content/dam/organik-aem-website/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/organik-aem-website/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/organik-aem-website" mode="merge"/>
+</workspaceFilter>
