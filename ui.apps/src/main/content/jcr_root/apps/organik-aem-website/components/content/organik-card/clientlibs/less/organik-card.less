@@ -1,0 +1,110 @@
+.organic-cards {
+  width: 100%;
+
+  .oc-container {
+    padding: 100px 70px;
+    display: flex;
+    gap: 50px;
+    overflow-x: hidden;
+
+    @media (max-width: 1100px) {
+      padding: 50px 35px;
+    }
+
+    @media (max-width: 992px) {
+      gap: 30px;
+    }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      gap: 20px;
+      padding: 25px;
+    }
+
+    .oc-cards {
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      flex: 1;
+      padding-top: 100px;
+      padding-left: 50px;
+
+      @media (max-width: 768px) {
+        height: 230px;
+        padding-top: 50px;
+        padding-left: 25px;
+      }
+      @media (max-width: 576px) {
+        height: 230px;
+        padding: 50px 25px;
+      }
+    }
+
+    .oc-subtitle {
+      font-family: var(--Yellowtail-font);
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.8;
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+        line-height: 1.8;
+      }
+    }
+
+    .oc-card-left {
+      opacity: 0;
+      transition: all 1s ease-in-out;
+      transform: translateX(-20%);
+
+      &.show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .oc-subtitle {
+        color: var(--white-color);
+      }
+    }
+
+    .oc-card-right {
+      opacity: 0;
+      transition: all 1s ease-in-out;
+      transform: translateX(20%);
+
+      &.show {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .oc-subtitle {
+        color: var(--light-green);
+      }
+
+      .oc-title {
+        color: var(--dark-blue);
+      }
+    }
+
+    .oc-title {
+      max-width: 55%;
+      color: var(--white-color);
+      font-size: 40px;
+      font-family: var(--roboto-font);
+      font-size: 42px;
+      line-height: 1.3;
+
+      @media (max-width: 1300px) {
+        max-width: 80%;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 25px;
+        line-height: 1.3;
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -90,3 +90,24 @@ html {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+//key frames for in and out
+@keyframes animate-width {
+  from {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+
+  to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes animate-width-reverse {
+  from {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  to {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+}

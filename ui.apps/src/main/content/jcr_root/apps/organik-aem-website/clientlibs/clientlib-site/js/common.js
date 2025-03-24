@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  
+  cardAnimation();
   // Intersection observer functionality
   function cardAnimation() {
     const observer = new IntersectionObserver((entries) => {

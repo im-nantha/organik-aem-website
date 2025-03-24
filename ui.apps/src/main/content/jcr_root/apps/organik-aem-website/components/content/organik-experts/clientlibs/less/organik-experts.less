@@ -1,0 +1,113 @@
+.organic-experts {
+  width: 100%;
+  padding: 40px 20px;
+
+  @media (max-width: 992px) {
+    padding: 25px;
+  }
+
+  .organic-experts-wrapper {
+    padding: 30px 10px;
+    @media (max-width: 576px) {
+      padding: 0px;
+    }
+
+    .oe-title-contents {
+      padding-bottom: 35px;
+      text-align: center;
+
+      .oe-subtitle {
+        .organic-subtitle();
+      }
+
+      .oe-title {
+        .organic-title();
+      }
+
+      .oe-text {
+        .organic-text();
+        max-width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    .oe-frame-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+      }
+
+      .oe-frames {
+        border-radius: 30px;
+        flex: 1;
+        background-color: var(--white-color);
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        transition: all 0.3s;
+
+        &:hover {
+          transition: all 0.3s;
+          background-color: #fff;
+          box-shadow: 0 1px 12px rgba(0, 0, 0, 0.16);
+        }
+
+        .oe-name {
+          .organic-title();
+          font-size: 25px;
+          padding-bottom: 0px;
+
+          @media (max-width: 768px) {
+            font-size: 22px;
+            line-height: 1.3;
+          }
+        }
+
+        .oe-desc {
+          .organic-subtitle();
+          font-size: 22px;
+
+          @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 1.2;
+          }
+        }
+
+        .oe-frame-header {
+          .oe-img {
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            width: 100%;
+          }
+        }
+
+        .oe-frame-footer {
+          padding: 20px 35px 35px;
+
+          .oe-frame-text {
+            padding-top: 10px;
+            .d-flex();
+            justify-content: space-between;
+          }
+
+          .oe-frame-icon-wrapper {
+            .d-flex();
+            gap: 20px;
+
+            .oe-icon-wrap {
+              max-width: 20px;
+              max-height: 20px;
+              width: 100%;
+              height: 100%;
+            }
+
+            @media (max-width: 768px) {
+              gap: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
