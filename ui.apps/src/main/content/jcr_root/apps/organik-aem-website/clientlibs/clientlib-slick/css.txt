@@ -1,0 +1,3 @@
+#base=css
+slick.min.css
+slick-theme.min.css

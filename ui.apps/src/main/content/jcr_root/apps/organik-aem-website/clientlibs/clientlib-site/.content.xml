@@ -3,4 +3,4 @@
           jcr:primaryType="cq:ClientLibraryFolder"
           allowProxy="{Boolean}true"
           categories="[organik-aem-website.site]"
-          embed="[organik-aem-website.organik-header,organik-aem-website.organik-footer]" />
+          embed="[organik-aem-website.organik-header,organik-aem-website.organik-footer,organik-aem-website.organik-banner]" />
