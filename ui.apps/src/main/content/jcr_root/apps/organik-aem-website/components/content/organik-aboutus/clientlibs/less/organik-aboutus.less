@@ -24,7 +24,9 @@
 
       @media (max-width: 992px) {
         .ao-img-wrapper {
-          .d-flex();
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           .ao-img {
             width: 350px;
@@ -35,7 +37,9 @@
       .ao-img {
         transform: translateY(10%);
         opacity: 0;
-        .cmp-img();
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
 
         &.show {
           opacity: 1;
@@ -159,7 +163,9 @@
           height: 100px;
           background-color: var(--pure-white);
           border-radius: 20px;
-          .d-flex();
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         &.show {
@@ -179,7 +185,9 @@
         font-weight: 700;
         border-radius: 16px;
         transform: translateY(35%);
-        .d-flex();
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
         cursor: pointer;
         transition: background-color 0.5s;
