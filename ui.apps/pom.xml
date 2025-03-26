@@ -130,6 +130,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>aem-sdk-api</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.core</artifactId>
         </dependency>

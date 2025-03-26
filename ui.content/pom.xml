@@ -92,6 +92,10 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>aem-sdk-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.organik.aem</groupId>
             <artifactId>organik-aem-website.ui.apps</artifactId>
             <version>${project.version}</version>

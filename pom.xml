@@ -42,10 +42,11 @@
     <vault.user>admin</vault.user>
     <vault.password>admin</vault.password>
     <frontend-maven-plugin.version>1.12.0</frontend-maven-plugin.version>
-    <core.wcm.components.version>2.26.0</core.wcm.components.version>
+    <core.wcm.components.version>2.18.0</core.wcm.components.version>
     <bnd.version>5.1.2</bnd.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <aem.sdk.api>2022.9.8630.20220905T184657Z-220800</aem.sdk.api>
     <componentGroupName>Organik AEM Website</componentGroupName>
   </properties>
   <build>
@@ -650,6 +651,12 @@ Bundle-DocURL:
         <version>5.7.4</version>
         <scope>provided</scope>
       </dependency>
+      <dependency>
+        <groupId>com.adobe.aem</groupId>
+        <artifactId>aem-sdk-api</artifactId>
+        <version>${aem.sdk.api}</version>
+        <scope>provided</scope>
+    </dependency>
       <dependency>
         <groupId>com.adobe.cq</groupId>
         <artifactId>core.wcm.components.core</artifactId>
