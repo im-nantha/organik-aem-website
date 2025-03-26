@@ -2,26 +2,21 @@
     ${'Edit {0} Component' @ format=[component.title], i18n}
 </p>
 
-<!-- <sly data-sly-use.bannerModel="com.organik.aem.core.models.OrganicBannerModel">
-    <p>Name is ${bannerModel.name}</p>
-    <p>id is ${bannerModel.id}</p>
+<sly data-sly-use.bannerModel="com.organik.aem.core.models.OrganicBannerModel">
     <section class="organic-banner">
-        <div data-sly-list.item="${bannerModel.bannerList}" class="og-banner-items">
-            <div class="ob-content-wrapper">
-                <div class="ob-content">
-                    <h3 class="ob-title">${item.bannerTitle}</h3>
-                    <h1 class="ob-main-title">${item.bannerMainTitle}</h1>
-                    <button class="ob-button explore-more">
-                        <p>${item.bannerPathLabel}</p>
-                        <img src="/content/dam/organik-aem-website/in/en-in/homepage/next-button.svg" alt="logobutton">
-                    </button>
+        <sly data-sly-list="${bannerModel.bannerList}">
+            <div class="og-banner-items" style="background-image: url('${item.bannerImagePath @context='uri'}');">
+                <div class="ob-content-wrapper">
+                    <div class="ob-content">
+                        <h3 class="ob-title">${item.bannerTitle}</h3>
+                        <h1 class="ob-main-title">${item.bannerMainTitle}</h1>
+                        <button class="ob-button explore-more">
+                            <p>${item.bannerPathLabel}</p>
+                            <img src="/content/dam/organik-aem-website/in/en-in/homepage/next-button.svg" alt="logobutton">
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </sly>
     </section>
-</sly> -->
-
-<div data-sly-use.bannerModel="com.organik.aem.core.models.OrganicBannerModel">
-    <p>Name is ${bannerModel.name}</p>
-    <p>Id is ${bannerModel.id}</p>
-</div>
+</sly>

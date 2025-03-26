@@ -5,7 +5,6 @@ $(document).ready(function () {
     console.log("component not found :", error);
   }
   function initiateBannerSlick() {
-    console.log("above slick");
     $(".organic-banner").slick({
       dots: false,
       infinite: true,
