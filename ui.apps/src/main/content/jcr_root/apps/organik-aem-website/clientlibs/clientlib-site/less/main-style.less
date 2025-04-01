@@ -35,20 +35,46 @@ html {
 //key frames for in and out
 @keyframes animate-width {
   from {
-      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   }
 
   to {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
 
 @keyframes animate-width-reverse {
   from {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   to {
-      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   }
+}
+
+@media (min-width: 1000px) {
+  /* scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
 }

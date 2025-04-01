@@ -1,0 +1,86 @@
+<sly data-sly-test="${(wcmmode.edit || wcmmode.design) && !listUse }" class="author-note">
+  ${'Edit {0} Component' @ format=[component.title], i18n}
+</sly>
+
+<section class="generic-banner-container">
+  <sly data-sly-list.bannerDetails="${resource.listChildren}">
+    <sly data-sly-test="${bannerDetails.name == 'genericBannerMultifield'}">
+      <div class="generic-banner-wrapper" data-interval="${properties.carouselInterval ? properties.carouselInterval : '5' }000">
+        <div class="generic-banner-carousel">
+          <sly data-sly-list="${bannerDetails.listChildren}">
+            <div data-sly-test="${item.assetType == 'imageAsset' && item.imageWebRef}" class="generic-banner-image-container ${properties.variant == 'responsive' ? 'vh-100':''}">
+              <a data-sly-unwrap="${!item.bannerRedirectionLink}" href="${item.bannerRedirectionLink}" target="${item.openInNewTab}">
+                <picture data-sly-test="${item.imageWebRef}">
+                  <source media="(max-width: 767px)" srcset="${item.imageMobileRef ? item.imageMobileRef : item.imageWebRef}" />
+                  <img loading="lazy" src="${item.imageWebRef}" class="generic-banner-image ${properties.variant == 'responsive' ? 'h-100 object-fit-cover':''}" alt="${item.imageAlt}">
+                </picture>
+              </a>
+            </div>
+
+            <div data-sly-test="${item.assetType == 'videoAsset' && item.genericVideoWeb}" class="generic-banner-video-container ${properties.variant == 'responsive' ? 'vh-100':''}">
+              <a data-sly-unwrap="${!item.bannerRedirectionLink}" href="${item.bannerRedirectionLink}" target="${item.openInNewTab}">
+                <video class="generic-banner-video-web ${properties.variant == 'responsive' ? 'h-100 object-fit-cover':''}" playsinline autoplay muted loop disablePictureInPicture disableremoteplayback >
+                  <source src="${item.genericVideoWeb}" type="video/webm">
+                  <source src="${item.genericVideoWeb}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </a>
+              <a data-sly-unwrap="${!item.bannerRedirectionLink}" href="${item.bannerRedirectionLink}" target="${item.openInNewTab}">
+                <video class="generic-banner-video-mobile ${properties.variant == 'responsive' ? 'h-100 object-fit-cover':''}" playsinline autoplay muted loop disablePictureInPicture disableremoteplayback >
+                  <source src="${item.genericVideoMobile ? item.genericVideoMobile : item.genericVideoWeb}" type="video/webm">
+                  <source src="${item.genericVideoMobile ? item.genericVideoMobile : item.genericVideoWeb}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </a>
+              <div class="volume-button" data-sly-test="${item.assetType == 'videoAsset' && item.hideMuteButton != 'true' }">
+                <div class="volume-on d-none" >
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_37664_16591)">
+                      <path d="M3.25 9.74998V16.25H7.58333L13 21.6666V4.33331L7.58333 9.74998H3.25ZM17.875 13C17.875 11.0825 16.77 9.43581 15.1667 8.63414V17.355C16.77 16.5641 17.875 14.9175 17.875 13ZM15.1667 3.49915V5.73081C18.2975 6.66248 20.5833 9.56581 20.5833 13C20.5833 16.4341 18.2975 19.3375 15.1667 20.2691V22.5008C19.5108 21.515 22.75 17.6366 22.75 13C22.75 8.36331 19.5108 4.48498 15.1667 3.49915V3.49915Z" fill="white"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_37664_16591">
+                        <rect width="26" height="26" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="volume-off">
+                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_37664_16585)">
+                      <path
+                        d="M17.875 13C17.875 11.0825 16.77 9.43583 15.1667 8.63417V11.0283L17.8208 13.6825C17.8533 13.4658 17.875 13.2383 17.875 13V13ZM20.5833 13C20.5833 14.0183 20.3667 14.9717 19.9983 15.86L21.6342 17.4958C22.3492 16.1525 22.75 14.625 22.75 13C22.75 8.36333 19.5108 4.485 15.1667 3.49917V5.73083C18.2975 6.6625 20.5833 9.56583 20.5833 13ZM4.62583 3.25L3.25 4.62583L8.37417 9.75H3.25V16.25H7.58333L13 21.6667V14.3758L17.6042 18.98C16.8783 19.5433 16.0658 19.9875 15.1667 20.2583V22.49C16.6617 22.1542 18.0158 21.4608 19.1642 20.5292L21.3742 22.75L22.75 21.3742L13 11.6242L4.62583 3.25ZM13 4.33333L10.7358 6.5975L13 8.86167V4.33333Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_37664_16585">
+                        <rect width="26" height="26" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </sly>
+        </div>
+
+        <div class="generic-banner-indicator-wrapper ${properties.carouselIndicatorStyling}">
+          <button style="display: none;" class="previous" aria-label="Previous" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="svg-class">
+                  <path d="M17 22.5L8 12L17 1.5" stroke="#FF0000" stroke-width="3" />
+              </svg>
+          </button>
+          <div class="indicator-position carousel-indicators"></div>
+          <button style="display: none;" class="next" aria-label="Next" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  class="svg-class">
+                  <path d="M7 22.5L16 12L7 1.5" stroke="#FF0000" stroke-width="3" />
+              </svg>
+          </button>
+        </div>
+        
+      </div>
+    </sly>
+  </sly>
+</section>
