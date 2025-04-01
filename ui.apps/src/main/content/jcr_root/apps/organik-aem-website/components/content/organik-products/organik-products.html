@@ -4,10 +4,10 @@
 
 <section class="organic-products" id="products">
     <div class="op-title-wrapper">
-        <h3 class="op-subtitle">Categories</h3>
-        <h1 class="op-title">Our Products</h1>
+        <h3 class="op-subtitle">${properties.title}</h3>
+        <h1 class="op-title">${properties.subtitle}</h1>
     </div>
-    <div class="organic-product-container">
+    <div class="organic-product-container" data-api-path="${properties.apiPath @ context='uri'}">
         <div class="organic-product-list">
             <div class="op-categ-wrapper">
                 <p class="op-category">Vegetable</p>
