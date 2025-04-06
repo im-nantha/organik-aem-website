@@ -3,4 +3,4 @@
     jcr:primaryType="cq:ClientLibraryFolder"
     allowProxy="{Boolean}true"
     categories="[organik-aem-website.site]"
-    embed="[organik-aem-website.organik-header,organik-aem-website.organik-footer,organik-aem-website.organik-banner,organik-aem-website.organik-card,organik-aem-website.organik-aboutus,organik-aem-website.organik-features,organik-aem-website.organik-gallery,organik-aem-website.organik-products,organik-aem-website.organik-experts,organik-aem-website.organik-blogs,organik-aem-website.organik-form,organik-aem-website.organik-carousel]"/>
+    embed="[organik-aem-website.organik-header,organik-aem-website.organik-footer,organik-aem-website.organik-banner,organik-aem-website.organik-card,organik-aem-website.organik-aboutus,organik-aem-website.organik-features,organik-aem-website.organik-gallery,organik-aem-website.organik-products,organik-aem-website.organik-experts,organik-aem-website.organik-blogs,organik-aem-website.organik-form,organik-aem-website.organik-carousel,organik-aem-website.organik-tabs]"/>
