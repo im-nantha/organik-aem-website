@@ -3,7 +3,7 @@ package com.organik.aem.core.servlets;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.organik.aem.core.constants.OrganikConstants;
-import com.organik.aem.core.services.osgiconfigs.APIConfigs;
+import com.organik.aem.core.osgiconfigs.APIConfigs;
 import com.organik.aem.core.utils.StaticWrapper;
 
 import org.apache.http.client.methods.CloseableHttpResponse;

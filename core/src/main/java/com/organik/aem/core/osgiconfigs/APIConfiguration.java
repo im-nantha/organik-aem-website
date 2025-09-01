@@ -1,4 +1,4 @@
-package com.organik.aem.core.services.osgiconfigs;
+package com.organik.aem.core.osgiconfigs;
 
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.AttributeType;

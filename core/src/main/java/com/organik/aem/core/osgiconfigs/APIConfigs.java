@@ -1,4 +1,4 @@
-package com.organik.aem.core.services.osgiconfigs;
+package com.organik.aem.core.osgiconfigs;
 
 import java.util.Map;
 

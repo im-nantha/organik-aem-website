@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.organik.aem.core.listeners;
+package com.organik.aem.core.events;
 
 import org.osgi.annotation.versioning.Version;

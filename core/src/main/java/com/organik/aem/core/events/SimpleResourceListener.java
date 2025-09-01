@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.organik.aem.core.listeners;
+package com.organik.aem.core.events;
 
 import java.util.List;
 
