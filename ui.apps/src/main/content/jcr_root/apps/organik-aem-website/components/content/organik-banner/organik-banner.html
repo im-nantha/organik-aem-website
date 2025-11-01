@@ -3,8 +3,9 @@
 </p>
 
 <sly data-sly-use.bannerModel="com.organik.aem.core.models.OrganicBannerModel">
+    <h1 style="text-align: center; padding: 30px;">${bannerModel.bannerDescription}</h1>
     <section class="organic-banner">
-        <sly data-sly-list="${bannerModel.bannerList}">
+        <sly data-sly-list.item="${bannerModel.bannerList}">
             <div class="og-banner-items" style="background-image: url('${item.bannerImagePath @context='uri'}');">
                 <div class="ob-content-wrapper">
                     <div class="ob-content">
